@@ -1,0 +1,24 @@
+{
+  "name": "neutron",
+  "version": "0.0.1",
+  "description": "Placcement prep portal",
+  "main": "index.html",
+  "scripts": {
+    "version": "parcel --version",
+    "dev": "parcel views/index.html",
+    "build": "parcel build views/index.html --public-url ./ --experimental-scope-hoisting",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Siddharth S.",
+  "license": "MIT",
+  "dependencies": {
+    "@dogstudio/highway": "^2.2.1",
+    "animejs": "^3.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "autoprefixer": "^9.8.6",
+    "sass": "^1.26.10"
+  }
+}

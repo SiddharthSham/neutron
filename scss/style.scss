@@ -1,0 +1,74 @@
+@import './fonts.scss';
+
+/* brutal reset */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+html,
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(1rem + 0.5vw);
+    /* background: #FC6404; */
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* root vars */
+
+:root {
+    --col: calc(100vw / 36);
+    --row: calc(100vh / 8);
+}
+
+/* common */
+
+#grid {
+    z-index: 9999;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    margin: 0 auto;
+    background-size: calc(var(--col) * 2) var(--row);
+    background-image:
+        linear-gradient(to right, rgba(255, 0, 0, 0.25) 0, rgba(255, 0, 0, 0.25) var(--col), transparent var(--col)),
+        linear-gradient(to bottom, transparent calc(var(--row) - 1px), rgba(255, 0, 0, 0.5) var(--row));
+}
