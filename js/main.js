@@ -1,4 +1,5 @@
-import H from './router/main'
+import H from './router/main';
+import * as components from './components/aside-bar'
 
 window.addEventListener('load', () => {
     console.log(`[APP LOADED]`)

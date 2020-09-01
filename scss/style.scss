@@ -21,15 +21,19 @@ body {
     -webkit-font-smoothing: antialiased;
     -webkit-font-smoothing: subpixel-antialiased;
     -ms-overflow-style: none;
-    scrollbar-width: none;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: calc(1rem + 0.5vw);
+    font-family: 'bs', Helvetica, Arial, sans-serif;
+    font-size: calc(0.5rem + 0.5vw);
+    line-height: 1.15;
     /* background: #FC6404; */
 }
 
 img {
     max-width: 100%;
     display: block;
+}
+
+button {
+    cursor: pointer;
 }
 
 input,
@@ -42,10 +46,6 @@ select {
 ul[class],
 ol[class] {
     list-style: none;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
 
 /* root vars */
@@ -71,4 +71,22 @@ ol[class] {
     background-image:
         linear-gradient(to right, rgba(255, 0, 0, 0.25) 0, rgba(255, 0, 0, 0.25) var(--col), transparent var(--col)),
         linear-gradient(to bottom, transparent calc(var(--row) - 1px), rgba(255, 0, 0, 0.5) var(--row));
+}
+
+.type-0 {
+    font-family: 'bs';
+}
+
+.type-1 {
+    font-family: 'nw', Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.1;
+}
+
+p {
+    max-width: 60ch;
+    margin-bottom: 2rem;
+}
+
+main {
+    margin-left: 15vw;
 }

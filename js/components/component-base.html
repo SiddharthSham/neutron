@@ -1,0 +1,77 @@
+<style>
+    aside {
+        display: grid;
+        place-items: center stretch;
+        position: fixed;
+        width: 25vh;
+        background: #eee;
+        height: 100vh;
+        padding: 1rem 0 0 0.8rem;
+    }
+
+    section {
+        margin: 0 0 2rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        cursor: pointer;
+        padding: 0.125rem 0 0.125rem 0.5rem;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    li:hover {
+        background: #ddd;
+    }
+</style>
+
+
+<div>
+    <span id="toggle-switch">x</span>
+    <aside id="aside-container">
+        <div>
+            <section>
+                <strong>Auth</strong>
+                <ul>
+                    <li>Login</li>
+                    <li>Register</li>
+                </ul>
+            </section>
+            <section>
+                <strong>Routes</strong>
+                <ul>
+                    <li><a href="/index.html">Index</a></li>
+                    <li><a href="/dashboard.html">Dashboard</a></li>
+                </ul>
+            </section>
+            <section>
+                <strong>Prep</strong>
+                <ul>
+                    <li>Quiz</li>
+                    <li>FAQ</li>
+                    <li>Resume generator</li>
+                    <li>Chatbot</li>
+                </ul>
+            </section>
+            <section>
+                <strong>Scheduler</strong>
+                <ul>
+                    <li>Timetable</li>
+                </ul>
+            </section>
+            <section>
+                <strong>Blog</strong>
+                <ul>
+                    <li>Latest articles</li>
+                    <li>My articles</li>
+                </ul>
+            </section>
+            <div>
+    </aside>
+
+</div>
