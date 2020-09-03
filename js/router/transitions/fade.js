@@ -12,7 +12,7 @@ class FadeTransition extends Highway.Transition {
         anime({
             targets: to,
             opacity: [0, 1],
-            duration: 600,
+            duration: 400,
             complete: done,
             easing: 'easeInExpo'
         })
@@ -24,7 +24,7 @@ class FadeTransition extends Highway.Transition {
     }) {
         anime({
             targets: from,
-            duration: 600,
+            duration: 400,
             opacity: [1, 0],
             complete: done,
             easing: 'easeOutExpo'
