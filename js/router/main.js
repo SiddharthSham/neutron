@@ -1,9 +1,11 @@
 import Highway from '@dogstudio/highway';
+import FadeTransition from './transitions/fade'
 import DefaultTransition from './transitions/default'
 
-export const H = new Highway.Core({
+const H = new Highway.Core({
     transitions: {
-        default: DefaultTransition
+        default: FadeTransition
     }
 });
 
+export default H
