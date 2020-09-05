@@ -12,7 +12,6 @@
 
 
 <body>
-
     <aside-bar>
         <slot></slot>
     </aside-bar>
@@ -24,144 +23,269 @@
                     right: 0;
                 }
 
-                .type-1 {
+                h1.type-1 {
                     font-size: 10vw;
-                    margin-bottom: calc(100vh / 4);
+                    margin-bottom: calc(100vh / 8);
                 }
 
-                .columns {
+                h2 {
+                    font-size: 3rem;
+                }
+
+                .container {
+                    width: calc(100vw / 36 * 19 + 3rem);
                     display: flex;
+                    flex-direction: column;
                 }
 
-                .column.left {
-                    flex-grow: 2;
+                #links,
+                #progress {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 3rem;
                 }
 
-                .column.right {
-                    flex-grow: 1;
-                    flex-basis: calc(100vh / 6);
+                #progress .card {
+                    flex-basis: 100%;
                 }
 
-                .news h3 {
-                    margin-bottom: 2rem;
+                .card {
+                    width: 100%;
+                    flex-basis: calc(100vw / 36 * 6.3334);
+                    /* flex-basis: 100%; */
+                    padding: 1rem;
+                    border-radius: 5px;
+                    box-shadow: 0 0.5em 1em -0.125em rgba(0, 0, 0, 0.1), 0 0px 0 1px rgba(0, 0, 0, 0.02);
+                    margin-bottom: 1rem;
+                    margin-right: 1rem;
                 }
 
-                .news_article {
+                .card h6,
+                h6 {
+                    margin-bottom: 0.75rem;
+                    font-size: 1.375rem;
+                }
+
+                h2 {
+                    margin-bottom: 1rem;
+                }
+
+                .card p {
+                    font-size: 0.90rem;
+                    color: #333333;
+                    font-weight: 500;
+                }
+
+                .card .buttons {
+                    padding-top: 1rem;
+                    font-size: 0.85rem;
+                }
+
+                #news {
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    width: calc(100vw / 36 * 10);
+                    height: 100vh;
+                    background: #ccc;
+                    padding-left: 1rem;
+                    overflow-y: scroll;
+                }
+
+                #news h3 {
+                    font-size: 5vw;
+                    margin-bottom: calc(100vh / 8);
+                }
+
+                .news_list--item {
                     border-top: 2px solid black;
-                    padding: 1rem 0;
+                    padding: 1rem 0 1rem 0;
+                    display: flex;
+                    justify-content: space-between;
                     cursor: pointer;
                 }
 
-                .news_article:last-of-type {
+                .news_list--item:last-of-type {
                     border-bottom: 2px solid black;
                 }
 
-                .news_article strong {
-                    margin-bottom: 0.25rem;
+                .news_list--item .arrow {
+                    font-size: 4vw;
+                    line-height: 1;
+                }
+
+                .progress_card {
+                    display: flex;
+                }
+
+                .progress_card--column {
+                    padding: 0 1rem 0 0;
+                    flex-basis: calc(100vw / 36 * 6.3334);
+                    margin-right: 2rem;
+                }
+
+                .progress_card--column:last-of-type {
+                    margin-right: 0;
+                }
+
+                .progress_card--column h2 {
+                    margin-bottom: 0;
+                }
+
+                .smol-font {
+                    font-size: 1.25rem;
+                    margin-left: 0.25rem;
                 }
             </style>
             <h1 class="type-1">Dashboard</h1>
-            <div class="columns">
-                <div class="column left">
-                    <div class="dash-news">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sed incidunt cum illum!
-                            Molestiae
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            provident voluptatum reprehenderit dolorum.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sed incidunt cum illum!
-                            Molestiae
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            provident voluptatum reprehenderit dolorum.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sed incidunt cum illum!
-                            Molestiae
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
-                            deleniti
-                            provident voluptatum reprehenderit dolorum.</p>
+            <div class="container">
+                <!-- <h2 class="type-1">Statistics</h2> -->
+                <section id="progress">
+                    <div class="card">
+                        <div class="progress_card">
+                            <div class="progress_card--column">
+                                <h2 class="type-1">14/48<span class="smol-font">problems</span></h2>
+                            </div>
+                            <div class="progress_card--column">
+                                <h2 class="type-1">29%<span class="smol-font">overall complete</span></h2>
+                            </div>
+                            <div class="progress_card--column">
+                                <h2 class="type-1">121<span class="smol-font">rank</span></h2>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="column right">
-                    <aside>
-                        <section>
-                            <ul class="news">
-                                <h3>Latest News</h3>
-                                <li class="news_article">
-                                    <strong>News heading</strong>
-                                    <p>Some short abstract of the actual content</p>
-                                </li>
-                                <li class="news_article">
-                                    <strong>News heading</strong>
-                                    <p>lorem ipsum sit amet dolor</p>
-                                </li>
-                                <li class="news_article">
-                                    <strong>News heading</strong>
-                                    <p>Some content here</p>
-                                </li>
-                                <li class="news_article">
-                                    <strong>News heading</strong>
-                                    <p>Some content here</p>
-                                </li>
-                            </ul>
-                        </section>
-                    </aside>
-                </div>
+                </section>
+                <!-- <h2 class="type-1">Resources</h2> -->
+                <section id="links">
+                    <div class="card">
+                        <h6>Resource link</h6>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
+                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
+                        <div class="buttons">
+                            <button>View</button>
+                            <button>Mark as done</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h6>Resource link</h6>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
+                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
+                        <div class="buttons">
+                            <button>View</button>
+                            <button>Mark as done</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h6>Resource link</h6>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
+                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
+                        <div class="buttons">
+                            <button>View</button>
+                            <button>Mark as done</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h6>Resource link</h6>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
+                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
+                        <div class="buttons">
+                            <button>View</button>
+                            <button>Mark as done</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h6>Resource link</h6>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
+                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
+                        <div class="buttons">
+                            <button>View</button>
+                            <button>Mark as done</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h6>Resource link</h6>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
+                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
+                        <div class="buttons">
+                            <button>View</button>
+                            <button>Mark as done</button>
+                        </div>
+                    </div>
+                </section>
             </div>
-
+            <aside id="news">
+                <h1 class="type-1">News</h1>
+                <section>
+                    <ul class="news_list">
+                        <li class="news_list--item">
+                            <div class="content">
+                                <h6>News heading</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum excepturi,
+                                    inventore eveniet asperiores dignissimos officiis pariatur et! Aspernatur atque
+                                    ullam aliquam quo voluptas. Mollitia ratione ullam rerum facere ad minima!</p>
+                            </div>
+                            <div class="arrow">
+                                &nearr;
+                            </div>
+                        </li>
+                        <li class="news_list--item">
+                            <div class="content">
+                                <h6>News heading</h6>
+                                <p>Short abstract of the news article...</p>
+                            </div>
+                            <div class="arrow">
+                                &nearr;
+                            </div>
+                        </li>
+                        <li class="news_list--item">
+                            <div class="content">
+                                <h6>News heading</h6>
+                                <p>Short abstract of the news article...</p>
+                            </div>
+                            <div class="arrow">
+                                &nearr;
+                            </div>
+                        </li>
+                        <li class="news_list--item">
+                            <div class="content">
+                                <h6>News heading</h6>
+                                <p>Short abstract of the news article...</p>
+                            </div>
+                            <div class="arrow">
+                                &nearr;
+                            </div>
+                        </li>
+                        <li class="news_list--item">
+                            <div class="content">
+                                <h6>News heading</h6>
+                                <p>Short abstract of the news article...</p>
+                            </div>
+                            <div class="arrow">
+                                &nearr;
+                            </div>
+                        </li>
+                        <li class="news_list--item">
+                            <div class="content">
+                                <h6>News heading</h6>
+                                <p>Short abstract of the news article...</p>
+                            </div>
+                            <div class="arrow">
+                                &nearr;
+                            </div>
+                        </li>
+                        <li class="news_list--item">
+                            <div class="content">
+                                <h6>News heading</h6>
+                                <p>Short abstract of the news article...</p>
+                            </div>
+                            <div class="arrow">
+                                &nearr;
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
         </article>
     </main>
 </body>

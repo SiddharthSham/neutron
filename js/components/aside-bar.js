@@ -88,10 +88,10 @@ class AsideBar extends HTMLElement {
         <section>
             <strong>Prep</strong>
             <ul>
-                <li>Quiz</li>
+                <li><a href="/prep/quiz.html">Quiz</a></li>
                 <li><a href="/prep/faq.html">FAQ</a></li>
-                <li>Resume generator</li>
-                <li>Chatbot</li>
+                <li><a href="/prep/resume-generator.html">Resume Generator</a></li>
+                <li><a href="/prep/chatbot.html">Chatbot</a></li>
             </ul>
         </section>
         <section>
