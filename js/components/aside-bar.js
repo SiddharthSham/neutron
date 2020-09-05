@@ -69,8 +69,8 @@ class AsideBar extends HTMLElement {
         <section>
             <strong>Auth</strong>
             <ul>
-                <li>Login</li>
-                <li>Register</li>
+                <li><a href="/auth/login.html">Login</a></li>
+                <li><a href="/auth/register.html">Register</a></li>
             </ul>
         </section>
         <section>
@@ -92,7 +92,7 @@ class AsideBar extends HTMLElement {
         <section>
             <strong>Scheduler</strong>
             <ul>
-                <li>Timetable</li>
+                <li><a href="/schedule.html">Timetable</a></li>
             </ul>
         </section>
         <section>
@@ -115,7 +115,7 @@ class AsideBar extends HTMLElement {
 
         this.aside = this.shadowRoot.querySelector('#aside-container');
 
-        // H.attach(this.shadowRoot.querySelectorAll('a'))
+        H.attach(this.shadowRoot.querySelectorAll('a'))
 
     }
 
