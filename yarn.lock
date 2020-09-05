@@ -393,6 +393,11 @@ lodash@^4.17.19:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
+main@^1000.0.1:
+  version "1000.0.1"
+  resolved "https://registry.yarnpkg.com/main/-/main-1000.0.1.tgz#a2098de0a82659e517b09fb9d2c57174e46db127"
+  integrity sha512-zhB0yIsogMo0xGJEusCzS4I13ejvhEJ1MOWi1OR4n77HyhlqgvNNwhOOt5moSdTYd+Vi8B4wPE/MDmhquNHxrA==
+
 minimist@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"

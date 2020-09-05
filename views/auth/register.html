@@ -16,7 +16,7 @@
         <slot></slot>
     </aside-bar>
     <main data-router-wrapper>
-        <article data-router-view="login">
+        <article data-router-view="login" data-script="register">
             <style>
                 .form-box{
                     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -85,14 +85,15 @@
                     cursor: pointer;
                 }
             </style>
-            <form action="#" method="POST" class="form-box">
+            <form name="RegForm" action="#" method="POST" class="form-box" onsubmit="return passwordCheck()">
                 <h1 class="type-1">Registeration</h1>
                 <input type="text" name="Uname" id="Uname" placeholder="Username" required>
                 <input type="password" name="Pword" id="Pword" placeholder="Password" required>
+                <input type="password" name="cPword" id="cPword" placeholder="Confirm Password" required>
                 <input type="email" name="Email" id="Email" placeholder="Email" required>
                 <input type="text" name="Dept" id="Dept" placeholder="Depatment" required>
                 <input type="date" name="YOG" id="YOG" placeholder="Year of Graduation" required>
-                <input type="submit" value="SignUp">
+                <input type="submit" id="submit-register" value="SignUp">
             </form>
         </article>
     </main>

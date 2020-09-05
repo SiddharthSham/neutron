@@ -107,11 +107,12 @@ button {
     border: none;
     padding: 0.5rem 0.75rem;
     margin: 0 0.5rem 0.5rem 0;
-    background: #333;
-    color: white;
+    background: #ccc;
+    color: black;
     transition: background 0.2s ease-in-out;
 }
 
 button:hover {
     background: black;
+    color: white;
 }
