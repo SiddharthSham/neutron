@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neutron - FAQ</title>
+    <script defer src="../../js/main.js"></script>
+    <link rel="stylesheet" href="../../scss/style.scss">
+    <link rel="stylesheet" href="../../css/faq.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <aside-bar>
+        <slot></slot>
+    </aside-bar>
+    <main data-router-wrapper>
+        <article data-router-view="faq">
+            <nav class="navigation">
+                <header class="title">
+                    <h3>Neutron</h3>
+                    <h4>FAQs</h4>
+                </header>
+                <article>
+                    <ul class="accordion">
+                        <li class="accordion__item">
+                            <a href="#" class="accordion__link accordion__link_active">What is Neutron?</a>
+                            <ul class="sub-accordion">
+                                <li class="sub-accordion__item">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis qui obcaecati
+                                        fuga
+                                        alias nostrum reiciendis consectetur necessitatibus dolorum ex. Fuga autem
+                                        officiis
+                                        porro, quia corporis eligendi perspiciatis eveniet iste dolorem?
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="accordion__item">
+                            <a href="#" class="accordion__link">What can you do with Neutron?</a>
+                            <ul class="sub-accordion">
+                                <li class="sub-accordion__item">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis qui obcaecati
+                                        fuga
+                                        alias nostrum reiciendis consectetur necessitatibus dolorum ex. Fuga autem
+                                        officiis
+                                        porro, quia corporis eligendi perspiciatis eveniet iste dolorem?
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="accordion__item">
+                            <a href="#" class="accordion__link">How do I view my progress?</a>
+                            <ul class="sub-accordion">
+                                <li class="sub-accordion__item">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis qui obcaecati
+                                        fuga
+                                        alias nostrum reiciendis consectetur necessitatibus dolorum ex. Fuga autem
+                                        officiis
+                                        porro, quia corporis eligendi perspiciatis eveniet iste dolorem?
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="accordion__item">
+                            <a href="#" class="accordion__link">How do I use the resume generator?</a>
+                            <ul class="sub-accordion">
+                                <li class="sub-accordion__item">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis qui obcaecati
+                                        fuga
+                                        alias nostrum reiciendis consectetur necessitatibus dolorum ex. Fuga autem
+                                        officiis
+                                        porro, quia corporis eligendi perspiciatis eveniet iste dolorem?
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="accordion__item">
+                            <a href="#" class="accordion__link">How do I report the bugs?</a>
+                            <ul class="sub-accordion">
+                                <li class="sub-accordion__item">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis qui obcaecati
+                                        fuga
+                                        alias nostrum reiciendis consectetur necessitatibus dolorum ex. Fuga autem
+                                        officiis
+                                        porro, quia corporis eligendi perspiciatis eveniet iste dolorem?
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="accordion__item">
+                            <a href="#" class="accordion__link">Are the services provided by Neutron enough for my
+                                preparation?</a>
+                            <ul class="sub-accordion">
+                                <li class="sub-accordion__item">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis qui obcaecati
+                                        fuga
+                                        alias nostrum reiciendis consectetur necessitatibus dolorum ex. Fuga autem
+                                        officiis
+                                        porro, quia corporis eligendi perspiciatis eveniet iste dolorem?
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+            </nav>
+        </article>
+    </main>
+    <script>
+        function slide(link) {
+
+            var down = function (callback, time) {
+                    var subMenu = link.nextElementSibling;
+                    var height = subMenu.clientHeight;
+                    var part = height / 100;
+
+                    var paddingTop = parseInt(window.getComputedStyle(subMenu, null).getPropertyValue(
+                        'padding-top'));
+                    var paddingBottom = parseInt(window.getComputedStyle(subMenu, null).getPropertyValue(
+                        'padding-bottom'));
+                    var paddingTopPart = parseInt(paddingTop) / 50;
+                    var paddingBottomPart = parseInt(paddingBottom) / 30;
+
+                    (function innerFunc(i, t, b) {
+
+                        subMenu.style.height = i + 'px';
+
+                        i += part;
+
+                        if (t < paddingTop) {
+
+                            t += paddingTopPart;
+                            subMenu.style.paddingTop = t + 'px';
+
+                        } else if (b < paddingBottom) {
+
+                            b += paddingBottomPart;
+                            subMenu.style.paddingBottom = b + 'px';
+                        }
+
+                        if (i < height) {
+
+                            setTimeout(function () {
+
+                                innerFunc(i, t, b);
+
+                            }, time / 100);
+
+                        } else {
+
+                            subMenu.removeAttribute('style');
+                            callback();
+                        }
+
+                    })(0, 0, 0);
+                },
+
+                up = function (callback, time) {
+
+                    var subMenu = link.nextElementSibling;
+                    var height = subMenu.clientHeight;
+                    var part = subMenu.clientHeight / 100;
+                    var paddingTop = parseInt(window.getComputedStyle(subMenu).paddingTop);
+                    var paddingBottom = parseInt(window.getComputedStyle(subMenu).paddingBottom);
+                    var paddingTopPart = parseInt(paddingTop) / 30;
+                    var paddingBottomPart = parseInt(paddingBottom) / 50;
+
+                    (function innerFunc(i, t, b) {
+
+                        subMenu.style.height = i + 'px';
+
+                        i -= part;
+                        i = i.toFixed(2);
+
+                        if (b > 0) {
+
+                            b -= paddingBottomPart;
+                            b = b.toFixed(1);
+                            subMenu.style.paddingBottom = b + 'px';
+
+                        } else if (t > 0) {
+
+                            t -= paddingTopPart;
+                            t = t.toFixed(1);
+                            subMenu.style.paddingTop = t + 'px';
+                        }
+
+                        if (i > 0) {
+
+                            setTimeout(function () {
+
+                                innerFunc(i, t, b);
+
+                            }, time / 100);
+
+                        } else {
+
+                            subMenu.removeAttribute('style');
+                            callback();
+                        }
+
+                    })(height, paddingTop, paddingBottom);
+                }
+
+            return {
+                down: down,
+                up: up
+            }
+        }
+
+        var accordion = (function () {
+
+            var menu = document.querySelectorAll('.accordion');
+            var activeClass = 'accordion__link_active';
+            var arr = [];
+            var timer = 100;
+
+            for (let i = 0; i < menu.length; i++) {
+
+                for (let p = 0; p < menu[i].children.length; p++) {
+
+                    var link = menu[i].children[p].firstElementChild;
+
+                    if (link.classList.contains(activeClass)) {
+                        arr[i] = link;
+                    }
+                }
+            }
+
+            function accordionInner(i) {
+
+                var clicked = false;
+
+                menu[i].addEventListener('click', function (e) {
+
+                    if (e.target.tagName === 'A' && !clicked) {
+
+                        clicked = true;
+
+                        if (e.target.classList.contains(activeClass)) {
+
+                            slide(e.target).up(function () {
+
+                                clicked = false;
+
+                                e.target.classList.remove(activeClass);
+
+                                console.log('slide up of accordion ' + i + ' is done');
+
+                            }, timer);
+
+                        } else {
+
+                            if (arr.length > 0) {
+
+                                slide(arr[i - 1]).up(function () {
+
+                                    arr[i - 1].classList.remove(activeClass);
+
+                                    arr[i - 1] = e.target;
+
+                                    console.log('slide up of accordion ' + i +
+                                        ' is done');
+
+                                }, timer);
+                            }
+
+                            e.target.classList.add(activeClass);
+
+                            slide(e.target).down(function () {
+
+                                clicked = false;
+
+                                arr[i - 1] = e.target;
+
+                                console.log('slide down of accordion ' + i +
+                                    ' is done');
+
+                            }, timer);
+                        }
+                    }
+                });
+
+                i++;
+
+                if (i < menu.length) {
+                    accordionInner(i);
+                }
+
+            }
+            accordionInner(0);
+        })();
+    </script>
+</body>
+
+</html>
