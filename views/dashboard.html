@@ -26,60 +26,142 @@
 
                 .type-1 {
                     font-size: 10vw;
-                    margin-bottom: 50vh;
+                    margin-bottom: calc(100vh / 4);
+                }
+
+                .columns {
+                    display: flex;
+                }
+
+                .column.left {
+                    flex-grow: 2;
+                }
+
+                .column.right {
+                    flex-grow: 1;
+                    flex-basis: calc(100vh / 6);
+                }
+
+                .news h3 {
+                    margin-bottom: 2rem;
+                }
+
+                .news_article {
+                    border-top: 2px solid black;
+                    padding: 1rem 0;
+                    cursor: pointer;
+                }
+
+                .news_article:last-of-type {
+                    border-bottom: 2px solid black;
+                }
+
+                .news_article strong {
+                    margin-bottom: 0.25rem;
                 }
             </style>
             <h1 class="type-1">Dashboard</h1>
-            <div class="dash-news">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sed incidunt cum illum! Molestiae
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    provident voluptatum reprehenderit dolorum.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sed incidunt cum illum! Molestiae
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    provident voluptatum reprehenderit dolorum.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sed incidunt cum illum! Molestiae
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    provident voluptatum reprehenderit dolorum.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sed incidunt cum illum! Molestiae
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi deleniti
-                    provident voluptatum reprehenderit dolorum.</p>
+            <div class="columns">
+                <div class="column left">
+                    <div class="dash-news">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sed incidunt cum illum!
+                            Molestiae
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            provident voluptatum reprehenderit dolorum.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sed incidunt cum illum!
+                            Molestiae
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            provident voluptatum reprehenderit dolorum.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sed incidunt cum illum!
+                            Molestiae
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            explicabo soluta optio tempore molestias fuga. Perspiciatis tempore consequuntur, est animi
+                            deleniti
+                            provident voluptatum reprehenderit dolorum.</p>
+                    </div>
+                </div>
+                <div class="column right">
+                    <aside>
+                        <section>
+                            <ul class="news">
+                                <h3>Latest News</h3>
+                                <li class="news_article">
+                                    <strong>News heading</strong>
+                                    <p>Some short abstract of the actual content</p>
+                                </li>
+                                <li class="news_article">
+                                    <strong>News heading</strong>
+                                    <p>lorem ipsum sit amet dolor</p>
+                                </li>
+                                <li class="news_article">
+                                    <strong>News heading</strong>
+                                    <p>Some content here</p>
+                                </li>
+                                <li class="news_article">
+                                    <strong>News heading</strong>
+                                    <p>Some content here</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </aside>
+                </div>
             </div>
+
         </article>
     </main>
 </body>

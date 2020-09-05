@@ -22,6 +22,11 @@ class AsideBar extends HTMLElement {
             transition: transform 0.4s ease-out;
         }
 
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
         aside.closed {
             transform: translateX(-100%);
         }
@@ -66,6 +71,13 @@ class AsideBar extends HTMLElement {
         <strong>x</strong>
     </span>
     <div>
+    <section>
+        <strong>Routes</strong>
+            <ul>
+                <li><a href="/index.html">Index</a></li>
+                <li><a href="/dashboard.html">Dashboard</a></li>
+            </ul>
+        </section>
         <section>
             <strong>Auth</strong>
             <ul>
@@ -74,17 +86,10 @@ class AsideBar extends HTMLElement {
             </ul>
         </section>
         <section>
-            <strong>Routes</strong>
-            <ul>
-                <li><a href="/index.html">Index</a></li>
-                <li><a href="/dashboard.html">Dashboard</a></li>
-            </ul>
-        </section>
-        <section>
             <strong>Prep</strong>
             <ul>
                 <li>Quiz</li>
-                <li>FAQ</li>
+                <li><a href="/prep/faq.html">FAQ</a></li>
                 <li>Resume generator</li>
                 <li>Chatbot</li>
             </ul>
