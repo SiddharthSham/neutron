@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neutron</title>
+    <script defer src="../../js/main.js"></script>
+    <link rel="stylesheet" href="../../scss/style.scss">
+</head>
+
+
+<body>
+    <!-- <div id="grid"></div> -->
+    <aside-bar>
+        <slot></slot>
+    </aside-bar>
+    <main data-router-wrapper>
+        <article data-router-view="blog-read">
+            <style>
+                main {
+                    padding-bottom: 0;
+                }
+
+                h1.type-1 {
+                    font-size: 10vw;
+                    margin-bottom: var(--row);
+                }
+
+                .left {
+                    min-width: calc(var(--col) * 19);
+                    padding: 0 1.5rem 0 0.5rem;
+                }
+
+                .right {
+                    min-width: calc(var(--cal) * 10);
+                    background: #333;
+                    color: white;
+                }
+
+                .left,
+                .right {
+                    width: 100%;
+                    height: 100vh;
+                    overflow-y: scroll;
+                }
+
+                .right h1 {
+                    padding-left: 1rem;
+                }
+
+                .cards {
+                    margin-bottom: 2rem;
+                }
+
+                .card {
+                    flex-basis: calc(var(--col) * 17);
+                }
+
+                .dark {
+                    margin-bottom: 0.25rem;
+                }
+
+                .dark,
+                .dark h6 {
+                    background: black;
+                    color: white;
+                    flex-basis: calc(var(--col) * 14);
+                }
+
+                .dark p {
+                    color: #ddd;
+                }
+
+                .dark button {
+                    background: #222;
+                    color: white;
+                }
+                .dark button:hover {
+                    background: white;
+                    color: #222;
+                }
+
+                h2 {
+                    margin-bottom: 2rem;
+                    font-size: calc(1.5rem + 1vw);
+                }
+                .pad-left {
+                    padding-left: 1rem;
+                }
+                .top-column {
+                    flex-basis: calc(100% / 3);
+                }
+                select, input[type=radio] {
+                    cursor: pointer
+                }
+                input {
+                    padding: 0.25rem 0.5rem;
+                    margin: 0 0 0 1rem;
+                }
+            </style>
+            <div class="columns">
+                <div class="left">
+                    <h1 class="type-1">Blog</h1>
+
+                    <div class="cards">
+                        <div class="card columns">
+                            <div class="top-column">
+                                <span>Filter by:</span>
+                            </div>
+                            <div class="top-column">
+                                <select name="filter" id="filter">
+                                    <option value="filter">Student Experiences</option>
+                                    <option value="filter">Interview Q/As</option>
+                                </select>
+                            </div>
+                            
+                            <div class="top-column">
+                                <input type="radio" name="sort" id="">
+                                <label for="latest">latest</label>
+                                <input type="radio" name="sort" id="">
+                                <label for="oldest">oldest</label>
+                                <input type="radio" checked name="sort" id="">
+                                <label for="popular">popular</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section>
+                        <h2>Student Experiences</h2>
+                        <div class="cards">
+
+                            <div class="card">
+                                <h6>Card header</h6>
+                                <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+                                    quisquam
+                                    amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem
+                                    vel!
+                                    Animi aut eveniet id ad culpa vero.</p>
+                                <div class="buttons">
+                                    <button>Read more</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h6>Card header</h6>
+                                <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+                                    quisquam
+                                    amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem
+                                    vel!
+                                    Animi aut eveniet id ad culpa vero.</p>
+                                <div class="buttons">
+                                    <button>Read more</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h6>Card header</h6>
+                                <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+                                    quisquam
+                                    amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem
+                                    vel!
+                                    Animi aut eveniet id ad culpa vero.</p>
+                                <div class="buttons">
+                                    <button>Read more</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h6>Card header</h6>
+                                <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+                                    quisquam
+                                    amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem
+                                    vel!
+                                    Animi aut eveniet id ad culpa vero.</p>
+                                <div class="buttons">
+                                    <button>Read more</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h6>Card header</h6>
+                                <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+                                    quisquam
+                                    amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem
+                                    vel!
+                                    Animi aut eveniet id ad culpa vero.</p>
+                                <div class="buttons">
+                                    <button>Read more</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h6>Card header</h6>
+                                <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+                                    quisquam
+                                    amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem
+                                    vel!
+                                    Animi aut eveniet id ad culpa vero.</p>
+                                <div class="buttons">
+                                    <button>Read more</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+                <div class="right">
+                    <h1 class="type-1">Editorial</h1>
+
+                    <section>
+                        <div class="card dark">
+                            <h6>Card header</h6>
+                            <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quisquam
+                                amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem vel!
+                                Animi aut eveniet id ad culpa vero.</p>
+                            <div class="buttons">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                        <div class="card dark">
+                            <h6>Card header</h6>
+                            <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quisquam
+                                amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem vel!
+                                Animi aut eveniet id ad culpa vero.</p>
+                            <div class="buttons">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                        <div class="card dark">
+                            <h6>Card header</h6>
+                            <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quisquam
+                                amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem vel!
+                                Animi aut eveniet id ad culpa vero.</p>
+                            <div class="buttons">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                        <div class="card dark">
+                            <h6>Card header</h6>
+                            <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quisquam
+                                amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem vel!
+                                Animi aut eveniet id ad culpa vero.</p>
+                            <div class="buttons">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                        <div class="card dark">
+                            <h6>Card header</h6>
+                            <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quisquam
+                                amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem vel!
+                                Animi aut eveniet id ad culpa vero.</p>
+                            <div class="buttons">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                        <div class="card dark">
+                            <h6>Card header</h6>
+                            <p>Card content Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quisquam
+                                amet! Beatae nisi esse corporis rerum quis tenetur explicabo vitae saepe voluptatem vel!
+                                Animi aut eveniet id ad culpa vero.</p>
+                            <div class="buttons">
+                                <button>Read more</button>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

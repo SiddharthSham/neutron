@@ -63,6 +63,26 @@ class AsideBar extends HTMLElement {
             display: grid;
             place-items: center;
         }
+        .bottom button {
+            position: absolute;
+            bottom: 1rem;
+            left: 0;
+            width: calc(100% + 1rem);
+            height: 3rem;
+            margin-left: -1rem;
+            outline: none;
+            border: none;
+            background: #04ACF4;
+            color: white;
+            cursor: pointer;
+            font-weight: 800;
+            letter-spacing: 1px;
+            transition: all 0.2s ease-in-out;
+        }
+        .bottom button:hover {
+            background: #ACE4FC;
+            color: black;
+        }
     </style>
     
     <div>
@@ -103,11 +123,16 @@ class AsideBar extends HTMLElement {
         <section>
             <strong>Blog</strong>
             <ul>
-                <li>Latest articles</li>
+                <li><a href="/blog/read.html">Latest articles</a></li>
                 <li>My articles</li>
             </ul>
         </section>
         <div>
+        <div class="bottom">
+            <button>
+                SETTINGS
+            </button>
+        </div>
     </aside>
     </div>
 `;
