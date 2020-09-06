@@ -29,7 +29,7 @@
 
                 .left {
                     min-width: calc(var(--col) * 19);
-                    padding: 0 1.5rem 0 0.5rem;
+                    padding: 0 0 0 0.5rem;
                 }
 
                 .right {
@@ -54,7 +54,7 @@
                 }
 
                 .card {
-                    flex-basis: calc(var(--col) * 17);
+                    flex-basis: calc(var(--col) * 18);
                 }
 
                 .dark {
@@ -76,6 +76,7 @@
                     background: #222;
                     color: white;
                 }
+
                 .dark button:hover {
                     background: white;
                     color: #222;
@@ -85,15 +86,20 @@
                     margin-bottom: 2rem;
                     font-size: calc(1.5rem + 1vw);
                 }
+
                 .pad-left {
                     padding-left: 1rem;
                 }
+
                 .top-column {
                     flex-basis: calc(100% / 3);
                 }
-                select, input[type=radio] {
+
+                select,
+                input[type=radio] {
                     cursor: pointer
                 }
+
                 input {
                     padding: 0.25rem 0.5rem;
                     margin: 0 0 0 1rem;
@@ -114,7 +120,7 @@
                                     <option value="filter">Interview Q/As</option>
                                 </select>
                             </div>
-                            
+
                             <div class="top-column">
                                 <input type="radio" name="sort" id="">
                                 <label for="latest">latest</label>
@@ -127,7 +133,7 @@
                     </div>
 
                     <section>
-                        <h2>Student Experiences</h2>
+                        <h2>Student <br> Experiences</h2>
                         <div class="cards">
 
                             <div class="card">
