@@ -1,29 +1,20 @@
-import H from './main';
-import {
-    hooks
-} from './hooks'
+import H from "./main";
+import { hooks } from "./hooks";
 
-
-H.on('NAVIGATE_IN', ({
-    to,
-    trigger,
-    location
-}) => {
-    if (to.view.dataset.script) {
-        if (hooks[to.view.dataset.script].mounted) {
-            hooks[to.view.dataset.script].mounted()
-        }
-    }
-})
-
-H.on('NAVIGATE_OUT', ({
-    from,
-    trigger,
-    location
-}) => {
-    if (from.view.dataset.script) {
-        if (hooks[from.view.dataset.script].unmount) {
-            hooks[from.view.dataset.script].unmount()
-        }
-    }
+H.on("NAVIGATE_IN", ({ to, trigger, location }) => {
+  try {
+    hooks[to.view.dataset.routerView].mounted();
+  } catch (e) {
+    console.warn(`[Transition hook to ${location.pathname} failed]: `, e);
+  }
 });
+
+H.on("NAVIGATE_OUT", ({ from, trigger, location }) => {
+  try {
+    hooks[from.view.dataset.routerView].unmount();
+  } catch (e) {
+    console.warn(`[Transition hook from ${location.pathname} failed]: `, e);
+  }
+});
+
+export default H;

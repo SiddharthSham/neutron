@@ -5,7 +5,6 @@ class AsideBar extends HTMLElement {
     constructor() {
         super();
 
-
         const shadowRoot = this.attachShadow({
             mode: 'open'
         });

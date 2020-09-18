@@ -1,276 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neutron</title>
     <script defer src="../js/main.js"></script>
-    <link rel="stylesheet" href="../scss/style.scss">
-</head>
+    <link rel="stylesheet" href="../scss/style.scss" />
+  </head>
 
-
-
-<body>
+  <body>
     <aside-bar>
-        <slot></slot>
+      <slot></slot>
     </aside-bar>
     <main data-router-wrapper>
-        <article data-router-view="dashboard">
-            <style>
-                nav {
-                    position: fixed;
-                    right: 0;
-                }
+      <article data-router-view="dashboard">
+        <style>
+          nav {
+            position: fixed;
+            right: 0;
+          }
 
-                h1.type-1 {
-                    font-size: 10vw;
-                    margin-bottom: calc(100vh / 8);
-                }
+          h1.type-1 {
+            font-size: 10vw;
+            margin-bottom: calc(100vh / 8);
+          }
 
-                h2 {
-                    font-size: 3rem;
-                }
+          h2 {
+            font-size: 3rem;
+          }
 
-                .container {
-                    width: calc(100vw / 36 * 19 + 3rem);
-                    display: flex;
-                    flex-direction: column;
-                }
+          .container {
+            width: calc(100vw / 36 * 19 + 3rem);
+            display: flex;
+            flex-direction: column;
+          }
 
-                #links,
-                #progress {
-                    width: 100%;
-                    display: flex;
-                    flex-wrap: wrap;
-                    margin-bottom: 3rem;
-                }
+          #links,
+          #progress {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+          }
 
-                #progress .card {
-                    flex-basis: 100%;
-                }
+          #progress .card {
+            flex-basis: 100%;
+          }
 
-                h2 {
-                    margin-bottom: 1rem;
-                }
+          h2 {
+            margin-bottom: 1rem;
+          }
 
+          #news {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: calc(100vw / 36 * 10);
+            height: 100vh;
+            background: #ccc;
+            overflow-y: scroll;
+          }
 
+          #news h3 {
+            font-size: 5vw;
+            margin-bottom: calc(100vh / 8);
+          }
 
-                #news {
-                    position: fixed;
-                    top: 0;
-                    right: 0;
-                    width: calc(100vw / 36 * 10);
-                    height: 100vh;
-                    background: #ccc;
-                    overflow-y: scroll;
-                }
+          .news_list--item {
+            border-top: 2px solid black;
+            padding: 1rem 0 1rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+          }
 
-                #news h3 {
-                    font-size: 5vw;
-                    margin-bottom: calc(100vh / 8);
-                }
+          .news_list--item:hover {
+            background: black;
+            color: white;
+          }
 
-                .news_list--item {
-                    border-top: 2px solid black;
-                    padding: 1rem 0 1rem 1rem;
-                    display: flex;
-                    justify-content: space-between;
-                    cursor: pointer;
-                }
+          .news_list--item:last-of-type {
+            border-bottom: 2px solid black;
+          }
 
-                .news_list--item:hover {
-                    background: black;
-                    color: white;
-                }
+          .news_list--item .arrow {
+            font-size: 4vw;
+            line-height: 1;
+          }
 
-                .news_list--item:last-of-type {
-                    border-bottom: 2px solid black;
-                }
+          .progress_card {
+            display: flex;
+          }
 
-                .news_list--item .arrow {
-                    font-size: 4vw;
-                    line-height: 1;
-                }
+          h6 {
+            font-size: 1.375rem;
+            margin-bottom: 0.75rem;
+          }
 
-                .progress_card {
-                    display: flex;
-                }
+          .progress_card--column {
+            padding: 0 1rem 0 0;
+            flex-basis: calc(100vw / 36 * 6.3334);
+            margin-right: 2rem;
+          }
 
-                h6 {
-                    font-size: 1.375rem;
-                    margin-bottom: 0.75rem;
-                }
+          .progress_card--column:last-of-type {
+            margin-right: 0;
+          }
 
-                .progress_card--column {
-                    padding: 0 1rem 0 0;
-                    flex-basis: calc(100vw / 36 * 6.3334);
-                    margin-right: 2rem;
-                }
+          .progress_card--column h2 {
+            margin-bottom: 0;
+          }
 
-                .progress_card--column:last-of-type {
-                    margin-right: 0;
-                }
-
-                .progress_card--column h2 {
-                    margin-bottom: 0;
-                }
-
-                .smol-font {
-                    font-size: 1.25rem;
-                    margin-left: 0.25rem;
-                }
-            </style>
-            <h1 class="type-1">Dashboard</h1>
-            <div class="container">
-                <!-- <h2 class="type-1">Statistics</h2> -->
-                <section id="progress">
-                    <div class="card">
-                        <div class="progress_card">
-                            <div class="progress_card--column">
-                                <h2 class="type-1">14/48<span class="smol-font">problems</span></h2>
-                            </div>
-                            <div class="progress_card--column">
-                                <h2 class="type-1">29%<span class="smol-font">overall complete</span></h2>
-                            </div>
-                            <div class="progress_card--column">
-                                <h2 class="type-1">121<span class="smol-font">rank</span></h2>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- <h2 class="type-1">Resources</h2> -->
-                <section id="links">
-                    <div class="card">
-                        <h6>Resource link</h6>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
-                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
-                        <div class="buttons">
-                            <button>View</button>
-                            <button>Mark as done</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h6>Resource link</h6>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
-                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
-                        <div class="buttons">
-                            <button>View</button>
-                            <button>Mark as done</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h6>Resource link</h6>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
-                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
-                        <div class="buttons">
-                            <button>View</button>
-                            <button>Mark as done</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h6>Resource link</h6>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
-                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
-                        <div class="buttons">
-                            <button>View</button>
-                            <button>Mark as done</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h6>Resource link</h6>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
-                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
-                        <div class="buttons">
-                            <button>View</button>
-                            <button>Mark as done</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h6>Resource link</h6>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, omnis voluptatem quod
-                            culpa, cumque vel beatae quas accusamus quos voluptatum!</p>
-                        <div class="buttons">
-                            <button>View</button>
-                            <button>Mark as done</button>
-                        </div>
-                    </div>
-                </section>
+          .smol-font {
+            font-size: 1.25rem;
+            margin-left: 0.25rem;
+          }
+        </style>
+        <h1 class="type-1">Dashboard</h1>
+        <div class="container">
+          <!-- <h2 class="type-1">Statistics</h2> -->
+          <section id="progress">
+            <div class="card">
+              <div class="progress_card">
+                <div class="progress_card--column">
+                  <h2 class="type-1">
+                    14/48<span class="smol-font">problems</span>
+                  </h2>
+                </div>
+                <div class="progress_card--column">
+                  <h2 class="type-1">
+                    29%<span class="smol-font">overall complete</span>
+                  </h2>
+                </div>
+                <div class="progress_card--column">
+                  <h2 class="type-1">121<span class="smol-font">rank</span></h2>
+                </div>
+              </div>
             </div>
-            <aside id="news">
-                <h1 class="type-1">News</h1>
-                <section>
-                    <ul class="news_list">
-                        <li class="news_list--item">
-                            <div class="content">
-                                <h6>News heading</h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum excepturi,
-                                    inventore eveniet asperiores dignissimos officiis pariatur et! Aspernatur atque
-                                    ullam aliquam quo voluptas. Mollitia ratione ullam rerum facere ad minima!</p>
-                            </div>
-                            <div class="arrow">
-                                &nearr;
-                            </div>
-                        </li>
-                        <li class="news_list--item">
-                            <div class="content">
-                                <h6>News heading</h6>
-                                <p>Short abstract of the news article...</p>
-                            </div>
-                            <div class="arrow">
-                                &nearr;
-                            </div>
-                        </li>
-                        <li class="news_list--item">
-                            <div class="content">
-                                <h6>News heading</h6>
-                                <p>Short abstract of the news article...</p>
-                            </div>
-                            <div class="arrow">
-                                &nearr;
-                            </div>
-                        </li>
-                        <li class="news_list--item">
-                            <div class="content">
-                                <h6>News heading</h6>
-                                <p>Short abstract of the news article...</p>
-                            </div>
-                            <div class="arrow">
-                                &nearr;
-                            </div>
-                        </li>
-                        <li class="news_list--item">
-                            <div class="content">
-                                <h6>News heading</h6>
-                                <p>Short abstract of the news article...</p>
-                            </div>
-                            <div class="arrow">
-                                &nearr;
-                            </div>
-                        </li>
-                        <li class="news_list--item">
-                            <div class="content">
-                                <h6>News heading</h6>
-                                <p>Short abstract of the news article...</p>
-                            </div>
-                            <div class="arrow">
-                                &nearr;
-                            </div>
-                        </li>
-                        <li class="news_list--item">
-                            <div class="content">
-                                <h6>News heading</h6>
-                                <p>Short abstract of the news article...</p>
-                            </div>
-                            <div class="arrow">
-                                &nearr;
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-            </aside>
-        </article>
-    </main>
-</body>
+          </section>
+          <section id="links">
+            <!-- Will be populated by JS -->
+          </section>
+        </div>
+        <aside id="news">
+          <h1 class="type-1">News</h1>
+          <section>
+            <ul id="news-list" class="news_list">
+              <!-- Will be populated by JS -->
+            </ul>
+          </section>
+        </aside>
 
+        <!-- templates -->
+        <template id="card-template">
+          <div class="card">
+            <h6 class="title"></h6>
+            <p class="content"></p>
+            <div class="actions buttons">
+              <button class="action">View</button>
+              <button class="action">Mark as done</button>
+            </div>
+          </div>
+        </template>
+
+        <template id="news-template">
+          <li class="news_list--item">
+            <div class="content">
+              <h6 class="title"></h6>
+              <p class="abstract"></p>
+            </div>
+            <div class="arrow">&nearr;</div>
+          </li>
+        </template>
+      </article>
+    </main>
+  </body>
 </html>
