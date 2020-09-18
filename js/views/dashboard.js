@@ -1,5 +1,5 @@
 export const dashboardMount = () => {
-  const linkData = [
+  const resourceData = [
     {
       title: "Resource link",
       content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum excepturi,
@@ -49,6 +49,20 @@ export const dashboardMount = () => {
       actions: "View, Mark as done",
     },
   ];
+
+  /**
+   * Use store to cache requests
+   *
+   * if (store.dashboard.news === null) {
+   *    fetch(data)
+   *    .then(() => {
+   *        useData()
+   *        store.dashboard.news = data
+   *    })
+   * } else {
+   *    useData()
+   * }
+   */
 
   const newsData = [
     {
@@ -106,7 +120,7 @@ export const dashboardMount = () => {
     const links = document.getElementById("links");
     const cardTemplate = document.getElementById("card-template");
 
-    linkData.forEach((el) => {
+    resourceData.forEach((el) => {
       const clone = cardTemplate.content.cloneNode(true);
       clone.querySelector(".title").innerText = el.title;
       clone.querySelector(".content").innerText = el.content;

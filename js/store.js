@@ -1,4 +1,4 @@
-// Use this module to cache network requests
+// Use this file to cache network requests
 
 export const store = {
   // init to null
