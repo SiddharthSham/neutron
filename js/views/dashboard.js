@@ -3,24 +3,21 @@ export const dashboardMount = () => {
     {
       title: "Resource link",
       content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum excepturi,
-                            inventore eveniet asperiores dignissimos officiis pariatur et! Aspernatur atque
-                            ullam aliquam quo voluptas. Mollitia ratione ullam rerum facere ad minima!`,
+                            inventore eveniet asperiores dignissimos officiis pariatur et! `,
       timestamp: Date.parse("9/11/1999"),
       actions: "View, Mark as done",
     },
     {
       title: "Resource link",
       content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum excepturi,
-                            inventore eveniet asperiores dignissimos officiis pariatur et! Aspernatur atque
-                            ullam aliquam quo voluptas. Mollitia ratione ullam rerum facere ad minima!`,
+                            inventore eveniet asperiores dignissimos officiis pariatur et!`,
       timestamp: Date.parse("9/11/1999"),
       actions: "View, Mark as done",
     },
     {
       title: "Resource link",
       content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum excepturi,
-                            inventore eveniet asperiores dignissimos officiis pariatur et! Aspernatur atque
-                            ullam aliquam quo voluptas. Mollitia ratione ullam rerum facere ad minima!`,
+                            inventore eveniet asperiores dignissimos officiis pariatur et!`,
       timestamp: Date.parse("9/11/1999"),
       actions: "View, Mark as done",
     },
@@ -128,9 +125,6 @@ export const dashboardMount = () => {
     });
   };
 
-  requestAnimationFrame((t) => {
-    createResourceLinks();
-    createNewsLinks();
-    console.log("Content populated @:", t);
-  });
+  createResourceLinks();
+  createNewsLinks();
 };

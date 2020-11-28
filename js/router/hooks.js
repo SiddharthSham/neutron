@@ -13,10 +13,10 @@ export const hooks = {
   },
   blogRead: {
     mounted: blogMount,
-    unmount: () => console.log("bye from blog read")
+    unmount: () => console.log("bye from blog read"),
   },
   dashboard: {
-      mounted: dashboardMount,
-      unmount: () => console.log("bye from dashboard")
+    mounted: dashboardMount,
+    unmount: () => console.log("bye from dashboard"),
   }
 };

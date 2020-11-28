@@ -1,35 +1,28 @@
-import Highway from '@dogstudio/highway';
-import anime from 'animejs';
+import Highway from "@dogstudio/highway";
+import anime from "animejs";
 
 class FadeTransition extends Highway.Transition {
-    in ({
-        from,
-        to,
-        done
-    }) {
-        window.scrollTo(0, 0);
-        from.remove();
-        anime({
-            targets: to,
-            opacity: [0, 1],
-            duration: 400,
-            complete: done,
-            easing: 'easeInExpo'
-        })
-    }
+  in({ from, to, done }) {
+    window.scrollTo(0, 0);
+    from.remove();
+    anime({
+      targets: to,
+      opacity: [0, 1],
+      duration: 200,
+      complete: done,
+      easing: "easeInCirc",
+    });
+  }
 
-    out({
-        from,
-        done
-    }) {
-        anime({
-            targets: from,
-            duration: 400,
-            opacity: [1, 0],
-            complete: done,
-            easing: 'easeOutExpo'
-        })
-    }
+  out({ from, done }) {
+    anime({
+      targets: from,
+      duration: 200,
+      opacity: [1, 0],
+      complete: done,
+      easing: "easeOutCirc",
+    });
+  }
 }
 
 export default FadeTransition;
